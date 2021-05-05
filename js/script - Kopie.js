@@ -20,7 +20,7 @@ function staticLoadPlaces() {
            }
        },
        {
-           name: 'Die Etagen',
+           name: 'Test Adresse',
            location: {
                lat: 52.299970,
                lng: 8.108220,

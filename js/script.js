@@ -9,18 +9,11 @@ window.onload = () => {
 function staticLoadPlaces() {
     return [
         {
-            name: 'Ruwe Strße 12a',
+            name: 'Pokèmon',
             location: {
-                lat: 52.277950,
-                lng: 8.103120,
-            }
-        },
-        {
-            name: 'Ruwe Strße',
-            location: {
-                lat: 52.278711,
-                lng: 8.103234,
-            }
+                // lat: <your-latitude>,
+                // lng: <your-longitude>,
+            },
         },
     ];
 }

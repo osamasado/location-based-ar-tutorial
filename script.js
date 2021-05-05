@@ -37,6 +37,7 @@ window.onload = () => {
     // first get current user location
     return navigator.geolocation.getCurrentPosition(function (position) {
 
+        console.log(position);
         // than use it to load from remote APIs some places nearby
         loadPlaces(position.coords)
             .then((places) => {
@@ -49,6 +50,9 @@ window.onload = () => {
                     placeText.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
                     placeText.setAttribute('title', place.name);
                     placeText.setAttribute('scale', '15 15 15');
+                    console.log(place.name);
+                    placeText.style.fontSize = 25;
+
                     
                     placeText.addEventListener('loaded', () => {
                         window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))

@@ -15,6 +15,13 @@ function staticLoadPlaces() {
                 lng: 8.103142799999999,
             },
         },
+        {
+            name: 'Alexej',
+            location: {
+                lat: 52.831843,
+                lng: 8.040694,
+            },
+        },
     ];
 }
 

@@ -51,7 +51,8 @@ window.onload = () => {
                     placeText.setAttribute('title', place.name);
                     placeText.setAttribute('scale', '15 15 15');
                     console.log(place.name);
-                    placeText.style.fontSize = 25;
+                    placeText.setAttribute('style', 'fontSize:25');
+                
 
                     
                     placeText.addEventListener('loaded', () => {

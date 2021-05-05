@@ -6,10 +6,17 @@ window.onload = () => {
 function staticLoadPlaces() {
    return [
        {
-           name: 'Magnemite',
+           name: 'Osama Adresse',
            location: {
-               lat: 44.496470,
-               lng: 11.320180,
+               lat: 52.277950,
+               lng: 8.103120,
+           }
+       },
+       {
+           name: 'Die Etagen',
+           location: {
+               lat: 52.139919,
+               lng: 8.141700,
            }
        },
    ];

@@ -19,6 +19,13 @@ function staticLoadPlaces() {
                lng: 8.141700,
            }
        },
+       {
+           name: 'Die Etagen',
+           location: {
+               lat: 52.299970,
+               lng: 8.108220,
+           }
+       },
    ];
 }
 

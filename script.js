@@ -1,7 +1,7 @@
 // getting places from APIs
 function loadPlaces(position) {
     const params = {
-        radius: 50,    // search places not farther than this value (in meters)
+        radius: 300,    // search places not farther than this value (in meters)
         clientId: 'FNGEK3NYNNVGR3QD150OJDNJKRUOSGNIPSMOPIMKCYWUCF0A',
         clientSecret: '1NJ4YVSVKMV5LB022RBU3K4EL2W5XKTB5WW3C1GDGHUFJYAC',
         version: '20300101',    // foursquare versioning, required but unuseful for this demo
@@ -11,12 +11,13 @@ function loadPlaces(position) {
     const corsProxy = 'https://cors-anywhere.herokuapp.com/';
 
     // Foursquare API (limit param: number of maximum places to fetch)
-    const endpoint = `${corsProxy}https://api.foursquare.com/v2/venues/search?intent=checkin
-        &ll=${position.latitude},${position.longitude}
+    // https://developer.foursquare.com/docs/api-reference/venues/search/
+    const endpoint = `${corsProxy}https://api.foursquare.com/v2/venues/search?
+        ll=${position.latitude},${position.longitude}
         &radius=${params.radius}
         &client_id=${params.clientId}
         &client_secret=${params.clientSecret}
-        &limit=30 
+        &limit=5
         &v=${params.version}`;
     return fetch(endpoint)
         .then((res) => {

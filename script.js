@@ -37,13 +37,14 @@ window.onload = () => {
     // first get current user location
     return navigator.geolocation.getCurrentPosition(function (position) {
 
+        console.log(position);
         // than use it to load from remote APIs some places nearby
         loadPlaces(position.coords)
             .then((places) => {
                 places.forEach((place) => {
                     const latitude = place.location.lat;
                     const longitude = place.location.lng;
-
+                    console.log(place.name);
                     // add place name
                     const placeText = document.createElement('a-link');
                     placeText.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
